@@ -1,4 +1,4 @@
-def remove_repeats(word):
+def remove_repeats(word) -> str: #this function removes repeated letters from a string returning the new string, keeping the order
 	word = word.lower()
 	new_word = ""
 	for letter in word:
@@ -7,14 +7,14 @@ def remove_repeats(word):
 	return new_word
 
 
-def build_cipher(word):
+def build_cipher(word) -> str: #this function returns the cipher alphabet obtained by joining the keyword and the missing alphabet letters
 	cipher_alphabet = word + ""
 	for letter in range(ord("a"),ord("z")):
 		if chr(letter) not in word:
 			cipher_alphabet = cipher_alphabet + chr(letter)
 	return(cipher_alphabet)
 
-def keyword_cipher(keyword, word):
+def keyword_cipher(keyword, word) -> str: #this function returns the ciphred word as the word where each letter is replaced by the corresponding letter in the cipher alphabet 
 	cipher_alphabet = build_cipher(remove_repeats(keyword))
 	translated_word = ""
 	word = word.lower()
@@ -25,4 +25,5 @@ def keyword_cipher(keyword, word):
 	return(translated_word)
 		
 
-print(keyword_cipher("mubashir", "edabit"))
+if __name__ == "__main__":
+	print(keyword_cipher("mubashir", "edabit"))
