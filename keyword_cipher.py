@@ -26,4 +26,27 @@ def keyword_cipher(keyword, word) -> str: #this function returns the ciphred wor
 		
 
 if __name__ == "__main__":
+	print("TESTING:\n")
+	print("Test 1")
+	print(keyword_cipher("keyword", "abchij"))
+	print("expected output: keyabc")
+
+	print("\nTest 2")
+	print(keyword_cipher("purplepineapple", "abc"))
+	print("expected output: pur")
+
+	print("\nTest 3")
 	print(keyword_cipher("mubashir", "edabit"))
+	print("expected output: samucq")
+
+	print("\nTest 4")
+	print(keyword_cipher("etaoinshrdlucmfwypvbgkjqxz", "abc"))
+	print("expected output: eta")
+
+	print("\nTest 5")
+	print(keyword_cipher("etaoinshrdlucmfwypvbgkjqxz", "xyz"))
+	print("expected output: qxz")
+
+	print("\nTest 6")
+	print(keyword_cipher("etaoinshrdlucmfwypvbgkjqxz", "aeiou"))
+	print("expected output: eirfg")
